@@ -17,7 +17,380 @@
       {
         "title": "Reversi",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 637,
+                "y": 230
+              },
+              "angle": 0,
+              "id": "50b86cd6-7587-42a8-adf9-44b5b024f01f",
+              "z": 1,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "DDOS attack",
+                  "type": "Denial of service",
+                  "description": "Too many requests"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Web\napplication"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 608,
+                "y": 476
+              },
+              "angle": 0,
+              "id": "62a8482d-ef9b-4d12-ad8b-624a4025ed7b",
+              "z": 4,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Wasn't me",
+                  "type": "Repudiation",
+                  "description": "User says it was not him that logged in."
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Exploit",
+                  "type": "Elevation of privilege",
+                  "description": "Abusing a bug in the system"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Player"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 605,
+                "y": 12
+              },
+              "angle": 0,
+              "id": "b8def65e-7677-4bf1-b3c4-addbe317859a",
+              "z": 7,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "title": "Leak",
+                  "description": "Information is accessible by others"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Database"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "b8def65e-7677-4bf1-b3c4-addbe317859a"
+              },
+              "target": {
+                "id": "50b86cd6-7587-42a8-adf9-44b5b024f01f"
+              },
+              "vertices": [
+                {
+                  "x": 614,
+                  "y": 165
+                }
+              ],
+              "id": "fbd9c60b-5d07-4871-b5d2-6f4852b82ab4",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Query Results",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 9,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "50b86cd6-7587-42a8-adf9-44b5b024f01f"
+              },
+              "target": {
+                "id": "b8def65e-7677-4bf1-b3c4-addbe317859a"
+              },
+              "vertices": [
+                {
+                  "x": 754,
+                  "y": 158
+                }
+              ],
+              "id": "8fbc51ba-e066-4069-8dc7-1689391ef101",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.47791733901165745,
+                    "offset": 5.9758866129780355
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Queries",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 10,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "62a8482d-ef9b-4d12-ad8b-624a4025ed7b"
+              },
+              "target": {
+                "id": "50b86cd6-7587-42a8-adf9-44b5b024f01f"
+              },
+              "vertices": [],
+              "id": "b99f8b34-729a-4f19-aa37-3ae05e99d0b8",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Login",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 11,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "false user",
+                  "type": "Spoofing",
+                  "description": "Using someone elses login credentials"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 372,
+                "y": 230
+              },
+              "angle": 0,
+              "id": "eb701699-2bfa-4630-90b5-c27d5bd3fd61",
+              "z": 12,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Lobby"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "50b86cd6-7587-42a8-adf9-44b5b024f01f"
+              },
+              "target": {
+                "id": "eb701699-2bfa-4630-90b5-c27d5bd3fd61"
+              },
+              "vertices": [],
+              "id": "c32fd79d-ff86-43f8-88f9-83d4d628ee30",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "After Query Results\nare positive",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 13,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 120,
+                "y": 231
+              },
+              "angle": 0,
+              "id": "a457897a-20f6-4eb2-86c2-b52556e29a91",
+              "z": 14,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "User hate",
+                  "type": "Tampering",
+                  "description": "Tampering is used to modify the product so it can harm the consumer."
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Match"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "eb701699-2bfa-4630-90b5-c27d5bd3fd61"
+              },
+              "target": {
+                "id": "a457897a-20f6-4eb2-86c2-b52556e29a91"
+              },
+              "vertices": [],
+              "id": "4f8e96bd-7af7-4ba5-baab-4ae08cbbc811",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Challenge accepted",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 15,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 1146
+        }
       }
     ],
     "reviewer": "Hackerman"
