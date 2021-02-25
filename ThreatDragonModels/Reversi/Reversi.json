@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "title": "Reversi",
+    "owner": "Ruben",
+    "description": "Reversi is an online game where two players can challenge eachother for a game, after that they get send to the game session in which they play 1v1 reversi till there is a winner."
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Player 1"
+      },
+      {
+        "name": "Player 2"
+      }
+    ],
+    "diagrams": [
+      {
+        "title": "Reversi",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "Hackerman"
+  }
+}
